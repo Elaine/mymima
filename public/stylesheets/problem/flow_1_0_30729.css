@@ -1,0 +1,177 @@
+a.ask2me{display:block; width:80px; height:22px; background-image:url(http://cn.yimg.com/i/nks/spask/img/btn_bg.gif); background-repeat:no-repeat;background-position:0 -22px; margin:0 0 0 68px; text-indent:-99999px; outline:none}
+a.ask2group{display:block; width:94px; height:22px; background-image:url(http://cn.yimg.com/i/nks/spask/img/btn_bg1.gif); background-repeat:no-repeat;background-position:0 0; text-indent:-99999px;margin:0 0 0 58px;}
+/*pd-type*/
+.yn-pd-type1{padding:10px 9px}
+.yn-pd-type2{padding:0 9px}
+.yn-pd-type3{padding:10px 9px 0}
+.yn-pd-type4{padding:0 9px 10px}
+.yn-pd-type5{padding:10px 0}
+div.no-pd{padding:0}
+/*yn-tags*/
+.yn-tags a{padding:0 5px;}
+/*yn-title*/
+.yn-title{padding:10px 0}
+.yn-title h3{font-weight:800;line-height:1.2;font-size:14px;}
+.yn-title span.links a{padding:0 8px;font-weight:400}
+.yn-title a.more{float:right;line-height:1;padding-right:5px;font-weight:800;font-size:14px;cursor:pointer}
+.yn-title-type1{padding-bottom:5px}
+.yn-title-type1 h4{border-bottom:solid 4px #7dc343; padding-bottom:3px;font-weight:800;line-height:1.2;font-size:14px;}
+.yn-title-type1 a.more{float:right;line-height:1.6;}
+.yn-title-type1 a.more span.orange{font-weight:800}
+/*askmod*/
+.yn-askmod{}
+.yn-askmod .l{width:112px;float:left}
+.yn-askmod .r{width:550px;float:right;border-style:dashed;border-color:#ddd;border-width:0 0 0 1px;padding:0 0 10px 15px}
+.yn-askmod .l p.title{text-align:right;font-size:14px}
+.yn-askmod .r .tip{color:#bfbfbf;}
+.yn-askmod .r p{line-height:1.2;padding:5px 0 3px 0}
+.yn-askmod .r h2{line-height:1.2;}
+.yn-askmod .r h2 strong{font-size:14px;}
+.yn-askmod .r h2 span{padding-right:20px}
+.yn-askmod .r .introduce{width:512px;height:150px;margin-top:2px}
+.yn-askmod .hue{color:#858585;}
+.yn-askmod .desired-ques{border-color:#a4abb1;border-width:2px;border-style:solid;line-height:1.2;padding:4px 6px 5px;width:510px;margin:0 0 10px 0}
+.yn-askmod .checkbox-style1{margin:0 10px 0 0;vertical-align:middle;_margin:0 10px 5px 0}
+.yn-askmod .location-ask{padding:0 10px}
+.yn-askmod .w-em17{width:17em}
+/*tips redsymbol*/
+.tips{background:url(http://cn.yimg.com/i/nks/hp/img/i_speaker.gif) no-repeat scroll 0 0;text-indent:20px}
+.redsymbol{color:#f00; vertical-align: middle;font-size: 18px;padding:0 5px 0 0}
+#locationask{padding:7px 0 4px 0;height:22px }
+#locationask em{vertical-align: bottom;}
+/*users-list*/
+.users-list{overflow:hidden;position:relative;top:0px;left:0;width:310px}
+.users-list li{padding:5px 0}
+.users-list li .potrait{float:left; width:80px;overflow:hidden}
+.users-list li .potrait input{margin:15px 0 0 5px;display:block;float:left}
+.users-list li .potrait img{float:right}
+.users-list li .intro{line-height:1.72;margin-left:90px;width:auto}
+.users-list li .intro h5{padding:3px 0 0 0}
+.users-list li .intro p{margin:0}
+#dialog1 .pagenav{width:auto;padding-bottom:10px}
+#dialog1 .pagenav a{padding:2px 6px;}
+#dialog1 .pagenav a.nextpre{padding:0}
+#dialog1 .tacenter{text-align:center}
+/*invite-mod-result*/
+#invite-mod-result{display:none}
+#invite-mod-result .potrait{float:left; width:55px;overflow:hidden}
+#invite-mod-result .potrait input{display:none;}
+#invite-mod-result .potrait img{float:left}
+#invite-mod-result .intro{line-height:1.3;margin-left:60px;width:auto}
+#invite-mod-result .intro h5{padding:0}
+#invite-mod-result .intro p{display:none}
+#invite-mod-result .intro p.excel{display:block}
+/*catselect*/
+#catselect{color:#666;font-size:12px;padding-left: 20px;}
+#catselect .select_class{color:#000}
+#catselect{color:#666}
+/*dynamic-info*/
+.dynamic-info{zoom:1}
+.dynamic-info .answer{margin-right:5px}
+.dynamic-info .asker{margin-left:5px}
+/*category-list*/
+.category-list{}
+.category-list li span.num{float:left;display:block;width:14px;height:40px;font-weight:800}
+.category-list li a.aksme{float:right}
+.category-list li span.up, .category-list li span.down{color:#666;background-image:url(http://cn.yimg.com/i/nks/spask/img/up_down_arrow.gif);background-repeat:no-repeat;padding:0 12px 0 0}
+.category-list li span.up{background-position:right 3px}
+.category-list li span.down{background-position:right -9px}
+/*block-type1*/
+.block-type1{position:relative}
+.block-type1 .reference{position:absolute;width:690px;bottom:0;left:0;text-align:center }
+/*ks-scroll*/
+#ks-scroll {background:url(http://cn.yimg.com/i/nks/hp/img/i_speaker.gif) no-repeat 10px 50% ;height:15px; padding:8px 10px 8px 35px; border:solid 1px #dcdcb7; background-color:#fffee3;}
+#ks-scroll span{position:relative;text-align:left;display:block;width:34em;height:1.6em;overflow:hidden;}
+#ks-scroll em.delete{float:right;width:8px;cursor:pointer;display:block;background:url(http://cn.yimg.com/i/nks/spask/img/icons1.gif) no-repeat 0 0;}
+#ks-scroll a{margin-right:.25em;}
+#ks-scroll ul{position:absolute;left:0;top:0;list-style:none;}
+#ks-scroll li{float:left;width:100%;clear:both;height:2em;overflow:hidden;}
+/*seats-container*/
+.seats-container{padding:10px 0}
+.seats-list{margin:0 0 10px 0}
+.seats-list li{float:left; width:19.9%; text-align:center; font-size:12px; margin:0 0 25px 0;font-size:12px}
+.seats-list li .sp-uesd{width:130px; height:117px; margin:0 auto 6px auto;}
+.seats-list li .sp-uesd .intro{width:130px; height:59px; background:url(http://cn.yimg.com/i/nks/spask/img/tip_bg.gif) no-repeat 0 0; text-align:left; margin:0 0 7px 0}
+.seats-list li .sp-uesd a{text-decoration:none}
+.seats-list li .sp-uesd .intro cite{display:block; padding:8px 8px 0 8px; line-height:1.6;}
+.seats-list li .sp-uesd span.photo{display:block; width:48px; height:48px; margin:0 auto}
+.seats-list li .sp-empty{display:block; width:128px; height:115px; border:1px solid #d2d2d2; margin:0 auto 6px auto; background:url(http://cn.yimg.com/i/nks/spask/img/seat_bg.gif) no-repeat 0 0}
+.seats-list li .btn-area a{display:block; width:80px; height:22px; background-image:url(http://cn.yimg.com/i/nks/spask/img/btn_bg.gif); background-repeat:no-repeat; margin:0 auto; text-indent:-99999px; outline:none}
+.seats-list li .btn-area a.sp-ask01{background-position:0 -22px;}
+.seats-list li .btn-area a.sp-ask01:hover{background-position:0 0}
+.seats-list li .btn-area a.sp-sit{background-position:0 -66px;}
+/*experts*/
+.experts .yn-pic-text{color:#666}
+.experts .yn-pic-text p .aboutanswers{float:right}
+.experts .yn-pic-text p .aboutanswers em{padding:0 .8em}
+.experts .yn-pic-text p a{text-decoration:underline}
+/*nengren-group*/
+.nengren-group .yn-pic-text{color:#666}
+.nengren-group .yn-pic-text h4.yn-pt-titl{font-weight:400;font-size:14px}
+/*hero-table*/
+.hero-table{width:100%}
+.hero-table th,
+.hero-table td{padding:.3em;font-size:12px}
+.hero-table td.avatar{width:48px;}
+.hero-table th b{display:block; width:22px; height:22px; background-image:url(http://cn.yimg.com/i/nks/spask/img/num_bg.gif); background-repeat:no-repeat}
+.hero-table th b.num1{width:28px; height:28px; background-position:0 0}
+.hero-table th b.num2{width:23px; height:23px; background-position:-1px -66px}
+.hero-table th b.num3{width:22px; height:22px; background-position:-3px -130px}
+.hero-table th b.num4{width:22px; height:22px; background-position:-3px -193px}
+.hero-table th b.num5{width:22px; height:22px; background-position:-3px -256px}
+.hero-table th b.num6{width:22px; height:22px; background-position:-3px -319px}
+.hero-table th b.num7{width:22px; height:22px; background-position:-3px -380px}
+.hero-table th b.num8{width:22px; height:22px; background-position:-3px -444px}
+.hero-table th b.num9{width:22px; height:22px; background-position:-3px -507px}
+.hero-table th b.num10{width:22px; height:22px; background-position:-3px -571px}
+.hero-table td span{display:block; line-height:1.6; margin:0 0 5px 0; color:#666; zoom:1;}
+.hero-table td span.up{background:url(http://cn.yimg.com/i/nks/spask/img/up_down_arrow.gif) no-repeat 92% 6px}
+.hero-table td span.down{background:url(http://cn.yimg.com/i/nks/spask/img/up_down_arrow.gif) no-repeat 92% -8px}
+.hero-table td p{margin-bottom:5px}
+.hero-table td a.sp-ask02{display:block; width:80px; height:22px; background-image:url(http://cn.yimg.com/i/nks/spask/img/btn_bg.gif); background-repeat:no-repeat; text-indent:-99999px; outline:none;background-position:0 -44px;}
+.hero-table td a.sp-ask02:hover{background-position:0 0}
+.hero-table td a.sp-ask03{display:block; width:80px; height:22px; background-image:url(http://cn.yimg.com/i/nks/spask/img/btn_bg.gif); background-repeat:no-repeat; text-indent:-99999px; outline:none;background-position:0 -22px;}
+.hero-table td a.sp-ask03:hover{background-position:0 0}
+
+#winBg{background:#000;opacity:0.5;-moz-opacity:0.5;KhtmlOpacity:0.5;filter:alpha(opacity=50); position:absolute; left:0; top:0;}
+
+/*yui-panel copied from container.css without rewriting by lina 20080723*/
+.yui-panel-container { position:absolute; background-color:transparent; z-index:6; visibility:hidden; overflow:visible; width:auto; } 
+.yui-panel-container.matte { padding:3px; background-color:#FFF;}
+.yui-panel-container.matte .underlay {display:none;}
+.yui-panel-container.shadow {padding:0px; background-color:transparent; } 
+.yui-panel-container.shadow .underlay { visibility:inherit; position:absolute; background-color:#000; top:3px;left:3px; z-index:0; width:100%; height:100%; -moz-opacity: 0.12; opacity:.12; filter:alpha(opacity=12); zoom:1; } 
+.yui-panel { visibility:hidden; border-collapse:separate; position:relative; left:0px;top:0px; font:1em Arial; background-color:#FFF; border:1px solid #000; z-index:1; overflow:hidden; } 
+.yui-panel .hd { background-color:#3d77cb; color:#FFF; font-size:100%; line-height:100%; border:1px solid #FFF; border-bottom:1px solid #000; font-weight:bold; overflow:hidden; padding:4px; } 
+.yui-panel .bd { overflow:hidden; padding:4px; } 
+.yui-panel .bd p { margin:0 0 1em; } 
+.yui-panel .container-close { position:absolute; top:5px; right:4px; z-index:6; height:12px; width:12px; margin:0px; padding:0px; background:url("http://cn.yimg.com/i/js/yui/asset/close12_1.gif") no-repeat; cursor:pointer; visibility:inherit; } 
+.yui-panel .ft { padding:4px; overflow:hidden;}
+
+#dialog1_c .yui-panel {visibility:hidden;border-collapse:separate;position:relative;font:12px;background:url(http://cn.yimg.com/i/nks/spask/img/dialog_bg.gif) no-repeat 0 0 #FFF;border:1px solid #000;z-index:1;overflow:hidden;text-align:left;}
+#dialog1_c .yui-panel button{height:25px; border:1px solid #777; line-height:1.22; font-size:14px; font-weight:800; color:#000; padding:0 .8em; background:url(http://cn.yimg.com/i/wireless/yid/img/yid_btn_bg.gif) repeat-x 0 0; padding:0 .5em; position:absolute; left:170px; top:100px;}
+.hide{display:none}
+#dialog1_c .yui-panel .hd {background:none;color:#FFF;font-size:100%;line-height:100%;border:1px solid #FFF;border-bottom:none;font-weight:bold;overflow:hidden;padding:4px;height:20px;}
+#dialog1_c .yui-panel .bd {overflow:hidden;padding:0 25px 10px 25px;}
+#dialog1_c .yui-panel .bd #dialog-inp {position:absolute; left:170px; top:60px; width:188px; padding:.2em; font-size:12px;}
+#dialog1_c .yui-panel .bd .hue{color:#ccc}
+#dialog1_c .yui-panel .container-close {position:absolute;top:5px;right:4px;z-index:6;height:18px;width:18px;margin:0px;padding:0px;background:url(http://cn.yimg.com/i/wireless/ablum/img/close_btn.gif) no-repeat;cursor:pointer;visibility:inherit;}
+#dialog-submit,
+#clear-seat{width:60px!important; height:24px; line-height:1.22;}
+#dialog2{background:url(http://cn.yimg.com/i/nks/spask/img/dialog_bg2.jpg) no-repeat 0 0 #FFF;}
+#dialog2 .bd p{text-align:center; color:#f60; line-height:1.6; padding:20px 0 0 0; font-weight:800}
+/*dialog-ask*/
+#dialog-ask_c .yui-panel{border:1px solid #dcdcdc;text-align:left}
+#dialog-ask_c .yui-panel .hd{border-color:#DCDCDC;border-style:solid solid dashed;border-width:1px;background:none;padding:0;color:#000;height:30px} 
+#dialog-ask_c .yui-panel .hd h4{font-weight:bold; padding:10px 10px 8px} 
+#dialog-ask_c .yui-panel .bd {padding:10px 10px 0;position:relative} 
+#dialog-ask_c .yui-panel .container-close {top:10px; right:10px}
+#dialog-ask_c .tacenter{text-align:center}
+#dialog-ask_c .pagenav a.nextpre{width:4.5em;text-align:center}
+#dialog-ask_c .yui-panel .ft {border-width:0}
+#dialog-ask_c .yui-panel .bd {border-width:0}
+#dialog-ask_c .yui-panel .hd {border-width:0 0 1px}
+#dialog-ask_c .ft a{padding:.3em .6em .3em}
+#dialog-ask_c .pagenav{margin-bottom:10px}
+
+

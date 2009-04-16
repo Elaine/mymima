@@ -1,0 +1,211 @@
+<%= render :partial => 'panel' %>
+<div class="mod">
+  <div class="modth">
+    <div class="lc">
+      <div class="rc">
+        <div class="modtit">
+          <h1>邀请好友</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modbox">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><textarea name="textarea" cols="9" style="overflow:auto;">mimimama</textarea></td>
+        <tr>
+          <td align="center" valign="top">
+            <input type="image" name="Submit" src="../images/yaoqing.gif"  onclick="copytoBoard()" /></td>
+        </tr>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<div class="mod">
+  <div class="modth">
+    <div class="lc">
+      <div class="rc">
+        <div class="modtit">
+          <h1>空间统计</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modbox">博客文章：0<br />
+    相册照片：1<br />
+    点评数：0<br />
+    空间访问量：63
+  </div>
+</div>
+
+<div class="mod">
+  <div class="modth">
+    <div class="lc">
+      <div class="rc">
+        <div class="modtit">
+          <h1>我的好友 (1/1)</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modbox">
+    <div id="myfriends">
+      <img onclick="warpclass('myf1','myf1_w')" id="myf1_w" src="/image/ctrlpanel/ico_dn.gif"
+      width="16" height="16" class="imgmiddle"  />我的好友(1)
+      <div class="myfriends" id="myf1">
+        <p><img class="myfriends-img" src="/user1/jshmemory/face35665.gif" 
+        width="120" height="120" /> <a href="home.php?u=jshmemory" target="_blank"><b>jshmemory</b></a><br />
+        [<a href="mail_new.php?mid=35665" target="_blank">短消息</a>]</p>
+      </div>
+      <div class="clear"></div>
+      <img onclick="warpclass('myf2','myf2_w')" id="myf2_w" src="/image/ctrlpanel/ico_dn.gif"
+      width="16" height="16" class="imgmiddle" /> 黑名单 (0)
+      <div class="myfriends" id="myf2">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mod">
+  <div class="modth">
+    <div class="lc">
+      <div class="rc">
+        <div class="modtit">
+          <h1>我的圈子 (15)</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modbox">
+    <div id="mygroups"> 
+      <img onclick="warpclass('myf3','myf3_w')" id="myf3_w" src="/image/ctrlpanel/ico_dn.gif"
+      width="16" height="16" class="imgmiddle" />我创建的朋友圈 (<span style="cursor:pointer;">0</span>)
+      <div class="myfriends" id="myf3">            </div>
+      <div class="clear"></div>
+      <img src="/image/ctrlpanel/ico_dn.gif" onclick="warpclass('myf4','myf4_w')"
+      id="myf4_w" width="16" height="16" class="imgmiddle" />我加入的朋友圈
+      (<span style="cursor:pointer;">              0            </span>)
+      <div class="myfriends" id="myf4">            </div>
+    </div>
+  </div>
+
+</div>
+
+
+    </div>
+    <div id="con">
+      <div class="mod">
+        <div class="modth">
+          <div class="lc">
+            <div class="rc">
+
+              <div class="modtit">
+                <h1>欢迎回来，xxx</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modbox"> 您现有积分
+          18分[<a href="?action=ur">更新我的积分</a>]，等级:军团学员(1级)，当前您的<a href="#">个人档案</a>完善度为56%。<br />
+          <% if flash[:notice] -%>
+            <%= flash[:notice] %>
+          <% end -%>
+        <!-- <% unless @user.has_shop? -%>         <% end %>-->
+          <%= link_to '<span style="color:#FF0000">激活店铺</span>', new_user_shop_path(@user) %>
+          <br />
+          <div class="clear">&nbsp;</div>
+        </div>
+      </div>
+      <div class="mod">
+        <div class="modth">
+          <div class="lc">
+            <div class="rc">
+              <div class="modtit">
+                <h1>最近访客</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="m_friend" class="modbox">
+
+          <ul>
+            <li><img src="/user/5880586/upload_images/1170256469_s.jpg" width="42" height="42" /><a href="home.php?u=5880586" target="_blank">若橘若梨</a></li>            <li><img src="/user1/jshmemory/face35665.gif" width="42" height="42" /><a href="home.php?u=jshmemory" target="_blank">jshmem</a></li>          </ul>
+          <div class="clear">&nbsp;</div>
+        </div>
+      </div>
+
+      <div class="mod">
+        <div class="modth">
+          <div class="lc">
+            <div class="rc">
+              <div class="modtit">
+
+                <h1>商品访问：</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modbox">
+          <div class="clear">&nbsp;</div>
+        </div>
+      </div>
+
+
+      <div class="mod">
+        <div class="modth">
+          <div class="lc">
+            <div class="rc">
+              <div class="modtit">
+                <h1>朋友圈新鲜事</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modbox">
+          <div class="clear">&nbsp;</div>
+          <!--<p class="more"><a href="#">更多更新&raquo;</a>--></p>
+      </div></div>
+      <div class="mod">
+        <div class="modth">
+          <div class="lc">
+            <div class="rc">
+              <div class="modtit">
+
+                <h1>好友新鲜事</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modbox">
+          <a href="home.php?u=jshmemory">jshmemory</a> 上传一张照片
+          <a href="space_photo.php?id=33032" target="_blank">122508194452</a> 2009-02-14<br />
+          <div class="clear">&nbsp;</div>
+        </div>
+      </div>
+
+      <div class="mod">
+        <div class="modth">
+          <div class="lc">
+            <div class="rc">
+              <div class="modtit">
+                <h1>最近加入</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="m_friend2" class="modbox">
+          <ul>
+            <li><img src="/images/noface.jpg" width="42" height="42" />
+            <a href="home.php?u=lyhyq001" target="_blank">lyhyq0</a></li>   
+            <li><img src="/images/noface.jpg" width="42" height="42" />
+            <a href="home.php?u=edishena" target="_blank">额滴神啊</a></li> 
+          </ul>
+          <div class="clear">&nbsp;</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="clear"></div>
+

@@ -1,0 +1,24 @@
+
+document.write('<div id="footer">');
+document.write('<div id="footmain">');
+document.write('<div id="logo2">');
+document.write('</div>');
+document.write('');
+document.write('<div id="logo3">');
+document.write('<div id="foot_ntjc"><a href="http://www.cdnet110.com/" title="成都网络报警亭" target="_blank"><span>成都网络报警亭</span></a></div>');
+document.write('</div>');
+document.write('</div>');
+document.write('</div>');
+document.write ('<script language="javascript" type="text/javascript" src="http://js.users.51.la/2107423.js"></script>');
+
+
+var oscript=document.createElement("script");
+if(document.attachEvent)oscript.onreadystatechange=gainit;
+else oscript.onload=gainit;
+oscript.src="http://www.google-analytics.com/urchin.js";
+oscript.type="text/javascript";
+ohead=document.getElementsByTagName("head")[0];
+ohead.appendChild(oscript);
+function gainit(){
+if((document.attachEvent&&oscript.readyState=='loaded')||!document.attachEvent){_uacct = "UA-96370-2";urchinTracker();}
+}

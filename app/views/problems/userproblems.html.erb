@@ -1,0 +1,218 @@
+<%= stylesheet_link_tag 'problem/1' %>
+<%= stylesheet_link_tag  'problem/2'%>
+<%= stylesheet_link_tag 'problem/3'%>
+<%= stylesheet_link_tag 'problem/4'%>
+<%= stylesheet_link_tag 'problem/5'%>
+<div class="ks-location">
+  <%= link_to '知识堂首页', problems_path %>&gt; 我的知识堂 
+</div>
+<!--/path-->
+<div class="doc-layout-body my-page" id="doc-body">
+  <div class="thm-wrapper">
+    <div class="fix2"></div>
+    <div class="doc-layout-1" id="doc-1">
+      <div class="container-1 profile" id="ymgl-profile">
+        <span class="shadow"></span>
+        <div class="thm-box">
+          <div class="subnav">
+            <div class="subnavoptical"></div>
+            <div class="subnavcon">
+              <span class="l"><%= @user.username %></span>
+              <span class="pp2 action-link">|</span>
+              <span class="l2">
+                <span class="smenu-ask">问答</span></span>
+            </div>
+          </div>
+          <div class="body">
+            <div class="user-card-shadow">
+              <div class="user-card" id="user-photos">
+                <div class="user-photo" id="user-photos-wrap">
+                  <% if @user.avatar%>
+                    <%= image_tag(@user.avatar.public_filename(:tiny))%>
+                  <% else %> 
+                    <%= image_tag("../images/noface.jpg")%>
+                  <% end %>
+                </div>
+                <div class="edperinfo">
+                </div>
+              </div>
+            </div>
+            <div class="good-at yn-mod-type1">
+              <div class="hd"><h4>我的特长</h4></div>
+              <div class="bd">
+                <ul class="fixfloat">
+                </ul>
+              </div>
+            </div>
+            <ul class="options">
+              <li><b>向我提过问的网友</b></li>
+            </ul>
+          </div>
+         <div class="foot">
+            <ul class="options"><li></li></ul>
+          </div>
+          <div class="foot">
+            <p class="datestamp">
+            <span>最后登入：<%= @user.last_activity_at.strftime("%Y-%m-%d")%></span>
+            <span>档案建立：<%= @user.created_at.strftime("%Y-%m-%d")%></span>
+            </p></div>
+            <span class="cb"><span class="cl"></span></span>
+          </div>
+        </div>
+        <div class="banner">
+        </div>	
+      </div>
+      <!--{{end:personal card -->
+      <div class="doc-layout-2" id="doc-2"><span class="beacon"></span>
+
+        <div class="blastfix"></div>
+        <span class="pagination top"><span>
+            <!--{start:tab -->
+            回答列表&nbsp;|&nbsp;
+            <a href="/my/my_question_ask">提问列表</a>&nbsp;|&nbsp;
+            <a href="/my/my_invite_my">特邀问答列表</a>&nbsp;|&nbsp;
+            <a href="/my/my_self_ks">贡献列表</a> &nbsp;|&nbsp;
+            <a href="/my/my_trace">收藏列表</a> &nbsp;|&nbsp;
+            <a href="/my/my_traceuser">答人列表</a> &nbsp;|&nbsp;
+            <a href="/my/my_ability">特长列表</a>&nbsp;|&nbsp;<a href="/my/my_points">积分明细</a>
+            <!--}end:tab -->
+        </span></span>
+        <div id="ymgl-blog" class="container-0 publish"><span class="shadow"></span>
+          <div class="thm-box">
+            <span class="ct"><span class="cl"></span></span>
+            <div id="ks-container">
+              <div class="head">
+                <span>&nbsp;<a href="/my/my_answer_best">最佳答案</a>(0)&nbsp;|&nbsp;
+                  <strong>其他回答</strong>(7)</span>
+              </div>
+              <dl class="body">
+                <dd class="post-body"> 
+                <div class="content-wrapper">
+                  <table class="ks-table-list" border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tbody><tr>		
+                        <th class="ks-table-list-first">分类</th>
+                        <th class="ks-table-list-first">标题</th>
+                        <th>&nbsp;</th>
+                        <th>悬赏分</th>
+                        <th>回答数</th>
+                        <th>意见数</th>
+                        <th>浏览量</th>
+                        <th>回答时间</th>											
+                      </tr>
+                      <% @replies.each do |reply|%>
+                        <tr><td class="ks-table-list-first"><span><%= reply.problem.problem_category.name%></span></td>
+                        <td class="ks-table-list-first">
+                          <%= reply.problem.title %>
+                        </td>
+                        <td><span class="stat2" title="提问中"></span></td>
+                        <td><%= reply.problem.score%></td>
+                        <td><%= reply.problem.replies_count %></td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td><%= reply.created_at.strftime("%Y-%m-%d")%></td>
+                      </tr>
+                    <% end %>
+                </tbody></table></div>    <!--{{{start:page -->
+                <div class="foot"><span class="pagination"><span>
+                      上一页 第一页 
+                      <b>1</b>                 	下一页 最末页
+                </span></span></div>
+                <!--}}}end:page -->
+                </dd></dl>
+              </div>
+              <!--}end:ks profile content -->
+              <span class="cb"><span class="cl"></span></span>
+            </div>
+          </div>
+          <div class="ks-item">
+            <div class="answer-col2-l">
+
+              <h2>回答总数：<%= @replies.size%>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/my/my_answer_best" onmousedown="clk(this, '/ks/prof/more', event);">所有回答&gt;&gt;</a></h2>
+              <table class="answer-table-figure" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody><tr>
+                    <td class="kstd2">
+                      <div class="histogram1" style="height: 20px;"><em>0%</em></div>
+                      最佳答案
+                    </td>
+                    <td class="kstd2">
+                      <div class="histogram2" style="height: 120px;"><em>100%</em></div>
+                      其他回答
+                    </td>
+                  </tr>
+              </tbody></table>
+            </div>
+            <div class="ask-col2-r">
+              <h2>最新回答 </h2>
+              <ul>
+                <% @replies.each do |reply|%>
+                  <li><span><%= reply.problem.problem_category.name%></span>
+                  <%= link_to reply.problem.title, problem_path(:id => reply.problem.id) %>
+                  </li>
+                <% end %>
+              </ul>
+            </div>
+              </div><div class="ks-item">    <div class="ask-col2-l"> 	
+              <h2>提问总数：<%= @problems.size %>&nbsp;&nbsp;&nbsp;&nbsp;
+                <%= link_to '所有提问', problems_path %>&gt;&gt;</a></h2>
+            <table class="histogram-table" border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tbody><tr>
+                  <td class="kstd2">
+                    <div class="histogram4" style="height: 120px;"><em>100%</em></div>
+                    提问中
+                  </td>
+                  <td class="kstd2">
+                    <div class="histogram4" style="height: 20px;"><em>0%</em></div>
+                    投票中
+                  </td>
+                  <td class="kstd2">
+                    <div class="histogram3" style="height: 20px;"><em>0%</em></div>
+                    已解决
+                  </td>
+
+                </tr>
+            </tbody></table>
+          </div>
+          <div class="ask-col2-r"> 	
+            <h2>最新提问</h2>
+            <ul>
+              <% @problems.each do |problem|%>
+                <li><span><%= problem.problem_category.name %></span>
+                <%= link_to problem.title, problem_path(:id => problem.id)%>
+                </li>    
+              <% end %>
+            </ul>
+          </div>
+            </div><div class="ks-item">    <div class="ask-col2-l"> 	
+            <h2>贡献总数：0&nbsp;&nbsp;&nbsp;&nbsp;<a href="/my/my_self_ks" onmousedown="clk(this, '/ks/prof/more', event);">所有贡献&gt;&gt;</a></h2>
+          </div>
+          <div class="ask-col2-r"> 	
+            <h2>最新知识贡献</h2>
+            <ul>
+            </ul>
+          </div>
+            </div><div class="ks-item">	 <div class="ask-col2-l">
+            <h2>特邀问答：0&nbsp;&nbsp;&nbsp;&nbsp;<a href="/my/my_invite_to" onmousedown="clk(this, '/ks/prof/more', event);">所有特邀问答&gt;&gt;</a></h2>
+          </div>
+          <div class="ask-col2-r"> 	
+            <h2>最新特邀问答</h2>
+            <ul>
+            </ul>
+          </div>
+          </div><div class="ks-item last" dragover="true">
+          <div class="ask-col2-l">
+            <h2>收藏的答人数：2&nbsp;&nbsp;&nbsp;&nbsp;
+            </h2>
+          </div>
+          <div class="ask-col2-r"> 	
+            <h2>最新答人动态</h2>
+            <ul>
+              <li><span><a href="/my/profile/AA05828209" traget="_blank" onmousedown="clk(this, '/ks/prof/hpc-man', event);">clioey...</a></span> 1天前回答了：<a href="/question/1309030901906.html" target="_blank" onmousedown="clk(this, '/ks/prof/hpc-ques', event);">青山刚昌短篇集那里有下载？</a></li><li><span><a href="/my/profile/AA05933542" traget="_blank" onmousedown="clk(this, '/ks/prof/hpc-man', event);">の坏桃...</a></span> 3个月前回答了：<a href="/question/1408113000459.html" target="_blank" onmousedown="clk(this, '/ks/prof/hpc-ques', event);">为什么有些人能录日本人的动画片</a></li>		<li><div align="right"> <a href="/my/my_traceduser" onmousedown="clk(this, '/ks/prof/hpc-bec', event);">共有0人收藏了我，查看&gt;&gt;</a> </div></li>
+            </ul>
+          </div>
+      </div>                                            </div>
+      <span class="cb"><span class="cl"></span></span>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>

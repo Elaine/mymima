@@ -1,0 +1,28 @@
+<div id="spacesease">
+  <div id="topnav">
+    <div class="lc">
+      <div class="rc">
+        <div class="left"><a href="/">回到网站首页</a> |
+          <a href="javascript:void(0)" onclick="window.clipboardData.setData('Text',location.href+'\nxuch');
+            alert('已经把该网址复制到剪贴板，您可以打开QQ或者MSN的对话框，\n然后使用（Ctrl+V或鼠标右键）粘贴功能给您的好友^_^');">复制地址</a> |
+          <a href="javascript:void(0)" onclick="window.external.AddFavorite(location.href,'xuch')">收藏</a>
+          <span id="header_msgnew" style="display:none"></span>
+        </div>
+        <div class="right">
+          <%=link_to '我的个人空间', :target => :blank %>|
+          <%= link_to '控制面板', user_path(:id =>@user) %> | <a href="#">注销</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="spaces_header">
+    <div class="lc">
+      <div class="rc">
+        <div class="tit">
+          <h1><%= userheader.username %></h1>
+      </div>
+        <div class="desc">desc</div>
+      </div>
+    </div>
+  </div>
+

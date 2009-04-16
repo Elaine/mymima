@@ -1,0 +1,121 @@
+<div class="ks-top-users-status fixfloat">
+  <img src="http://cn.yimg.com/i/ks/rank/rank_female_2.gif" width="48" height="48" class="ks-top-potrait">
+  <p><%= link_to '进入我的知识堂',userproblems_problems_path(:user_id => logged_in_user.id), :method => :put %></p>
+</div>
+<div id="ks-main">
+  <!-- path -->
+  <div class="navbar">
+    <%= link_to '知识堂首页', problems_path %> &gt; 
+    <%= link_to @problem.problem_category.name %> &gt; </div>
+  <div id="content" class="cate">
+    <div id="main">
+      <div id="question" class="gmodule">
+        <div class="hd">
+          <h2>提问中问题 <span>- 浏览(目前为空)次</span></h2>
+        </div>
+        <div class="bd">
+          <div class="ksentry">
+            <div class="usrinfo">
+              <span class="avatar">
+                <% if @problem.user.avatar%>
+                  <%= image_tag(@problem.user.avatar.public_filename(:tiny))%>
+                <% else %> 
+                  <%= image_tag("../images/noface.jpg")%>
+                <% end %>
+              </span>
+              <p><b><%= @problem.user.username%></b></p>
+              <p></p>
+            </div>
+            <div class="entrydetail">
+              <h3><%= @problem.title %>  </h3>
+              <div class="original"><p><%= @problem.content %></p></div>            </div>
+            <div class="entryinfo"><span><%= @problem.created_at.strftime("%Y-%m-%d %H-%m")%>
+              </span> - <span>离结束还有<%= @problem.end_at.strftime("%d").to_i - @problem.created_at.strftime("%d").to_i %> 天</span> 
+              - <span><%= @problem.replies_count %>个回答</span> 
+              - <span class="m">40</span> 
+            </div>
+            <div class="actions">
+              <div class="l">
+                <%= link_to '回答该问题',new_problem_reply_path(:problem_id => @problem), :class => 'button' %></div>
+              <div class="r">
+                <span class="qactions">
+                  <%= link_to '收藏' %>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="otheranswers" class="gmodule">
+        <div class="hd">
+          <h2>回答(<%= @problem.replies_count %>)</h2>
+        </div>
+        <div class="bd">
+          <ul>
+            <% @replies.each do |reply|%>
+              <li class="ksentry">
+              <div class="usrinfo">
+                <span class="avatar">
+                  <% if reply.user.avatar%>
+                    <%= image_tag(reply.user.avatar.public_filename(:tiny))%>
+                  <% else %> 
+                    <%= image_tag("../images/noface.jpg")%>
+                  <% end %>
+                </span>
+                <p><b><%= @problem.user.username%></b></p>
+                <p><%= link_to '采取为答案', set_answer_problem_reply_path(:id => reply.id), :method => :put %></p>
+              </div>
+              <div class="entrydetail">
+                <p><%= reply.content %></p>
+              </div>
+              <div class="entryinfo">
+                <span><%= reply.created_at.strftime("%Y-%m-%d")%></span>
+              </div>
+
+              <div class="actions">
+                <div class="r">
+                  <% if logged_in_user == reply.user %>
+                    <%= link_to '编辑', edit_problem_reply_path(:problem_id => reply.problem.id, :id => reply.id)%>
+                    | <%= link_to '删除', problem_reply_path(:id => reply.id, :problem_id => reply.problem.id), :method => :delete, :confirm => "你确定要删除吗?"%>
+                  <% end %>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+        <p class="return_home"><%= link_to '返回知识堂首页', problems_path %>&gt;&gt;</p>
+      </div>
+      <!-- 中间区域 -->
+      <div id="side1">
+        <div id="ks_nav" class="gmodule">
+          <div class="hd">
+            <h2>知识导航</h2>
+          </div>
+          <div class="bd">
+            <ul>
+              <% @categories.each do |category|%>
+                <li class="current_cate"><%= link_to category.name %> </li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+        <div class="gmodule" id="rlinks">
+          <div class="hd">
+            <h2>相关链接</h2>
+
+            <a href="http://help.cn.yahoo.com/property.html?product=knowledge" target="_blank" class="more" onmousedown="clk(this, sds_path+'llnk', event);">更多</a>
+          </div>
+          <div class="bd">
+            <ul class="glist">
+              <li><a href="/info/tos.html" target="_blank" onmousedown="clk(this, sds_path+'llnk', event);">规范</a>/ <a href="/info/points.html" target="_blank" onmousedown="clk(this, sds_path+'llnk', event);">积分规则</a>/ <a href="/jifen/prizes" target="_blank" onmousedown="clk(this, sds_path+'llnk', event);">积分换礼</a></li>
+              <li><a href="http://i.cn.yahoo.com/cn_knowledge" target="_blank" onmousedown="clk(this, sds_path+'llnk', event);">空间</a>/ <a href="http://help.cn.yahoo.com/feedback.html?product=knowledge" target="_blank" onmousedown="clk(this, sds_path+'llnk', event);">反馈邮箱</a>/ <a href="http://cn.bbs.yahoo.com/forum/read_%D6%AA%CA%B6%CC%C3_1.html" target="_blank" onmousedown="clk(this, sds_path+'llnk', event);">在线反馈</a></li>
+
+            </ul>
+            <ul class="glist alt">
+              <li><a href="http://help.cn.yahoo.com/answerpage.html?product=knowledge&catyname=contribute" target="_blank" onmousedown="clk(this, sds_path+'llnk', event);">如何贡献知识</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

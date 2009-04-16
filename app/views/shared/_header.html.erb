@@ -17,10 +17,10 @@
   <div id="navtab">
     <ul>
       <li class="tb"><%= link_to '首页', home_path %></li>
-      <li class="ta"><a>摄影婚庆</a></li>
-      <li class="ta"><a >家装建材</a></li>
+      <li class="ta"><%= link_to '摄影婚庆' %></li>
+      <li class="ta"><%= link_to '家装建材' %></li>
       <li class="ta"><%= link_to '汽车服务', listpage_doc_path(:name => "汽车服务")%></li>
-      <li class="ta"><a>培训教育</a></li>
+      <li class="ta"><%= link_to '培训教育' %></li>
       <li class="ta"><%= link_to '健身美容', listpage_doc_path(:name => "健身美容")%></li>
     </ul>
   </div>
@@ -29,7 +29,7 @@
     <ul>
       <li class="t4"><%= link_to '论坛', forums_path %></li>
       <li class="t2"><%= link_to '活动', events_path %></li>
-      <li class="t1"><a>消费点评</a></li>
+      <li class="t1"><%= link_to '知识堂', problems_path%></li>
     </ul>
   </div>
 

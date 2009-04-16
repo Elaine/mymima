@@ -1,0 +1,32 @@
+#topbar * {margin:0; padding:0;}
+#topbar:after {content:"";display:block;height:0;overflow:hidden;clear:both;}
+#topbar {zoom:1;}
+#topbar, .searchbar {margin:10px auto; width:950px; }
+#topbar {*margin-top:0; *position:relative; *z-index:100; border:1px solid #6ac4c4; background:#ecf7f6;}
+#topbar ol {margin-left:0;}
+#topbar .promotion {float:left; width:705px; border-right:1px solid #6ac4c4; background:#fff;}
+#topbar .login {margin-left:705px;}
+#topbar .login a {color:#04d;}
+#topbar .unlogin {padding-top:18px; padding-right:13px; font-size:14px; text-align:right;}
+#topbar .logined {position:relative; z-index:2; padding-top:6px; top:0;}
+#topbar .logined span {display:inline; margin-top:4px;}
+#topbar .logined span.m {margin-left:10px; padding-left:13px; background:url(http://cn.yimg.com/i/nks/coin.gif) no-repeat 0 50%;}
+#topbar .avatar {position:relative;zoom:1;}
+#topbar .avatar, #topbar .rinfo {padding-left:80px;display:block;text-align:left;}
+#topbar .avatar img {position:absolute;left:10px; top:-12px; *top:-8px; _top:-6px; display:block; height:48px; padding:5px; border:1px solid #6ac4c4; background:#def1ef;}
+#topbar .avatar span {display:-moz-inline-box; display:inline-block; white-space:nowrap; overflow:hidden; *margin-top:0!important; cursor:pointer;}
+#topbar li {list-style:none; float:left; _display:inline; margin:5px 0; border-right:1px solid #bae3df; width:234px; height:40px;} 
+#topbar li strong {display:none;}
+#topbar li a {display:block; _width:.1em; _white-space:nowrap; padding:22px 0 0 110px; background-position:13px 5px; background-repeat:no-repeat;}
+#topbar li a:link, #topbar li a:visited {color:#9f9f9f;} 
+#topbar li#discover {border:0;}
+#topbar li#ask a {background-image:url(http://cn.yimg.com/i/nks/ask3.gif);}
+#topbar li#answer a {background-image:url(http://cn.yimg.com/i/nks/answer3.gif);}
+#topbar li#discover a {background-image:url(http://cn.yimg.com/i/nks/discover4.gif);}
+.searchbar {clear:both; padding:5px 0; background:#def1ef;}
+.searchbar input {vertical-align:middle; font-size:14px; font-weight:bold; padding:3px; *padding-bottom:0;} 
+.searchbar .text {width:500px; margin-left:155px; padding:3px; border:1px solid #acb4b7; background:#fff url(http://cn.yimg.com/i/hp/07/inpbg2.gif) 0 0 no-repeat; font-weight:normal;}
+#hdsch, #doc-head {width:950px!important; margin:auto;}
+
+html #doc-body {*margin-top:-1em!important;}
+html .ks-location {*top: -1em!important;}

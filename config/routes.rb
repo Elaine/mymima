@@ -34,6 +34,9 @@ ActionController::Routing::Routes.draw do |map|
     user.resources :tags
   end
 
+  map.resources :problems, :collection => { :userproblems => :put } do |problem|
+    problem.resources :replies, :member => { :set_answer => :put }
+  end
   map.resources :doc, :collection => {:listpage => :get}
   map.namespace :admin do |admin|
     admin.resources :categories do |category|

@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>Users: <%= controller.action_name %></title>
+<%= stylesheet_link_tag :all %>
+<%= javascript_include_tag 'prototype' %>
+
+  </head>
+  <body>
+
+<%= render :partial => 'users/userheader', :object => @user %>
+
+  <div id="nav">
+    <div class="lc">
+      <div class="rc">
+        <%= link_to '控制面板', user_path(:id =>@user), :class => 'on' %>
+        <%= link_to '首页', userhome_path(:id => @user) %>
+        <a href="profile.php?mid=37440"><font>个人档案</font></a>
+        <a href="myblog.php?mid=37440"><font>博客</font></a>
+        <a href="myalbum.php?mid=37440"><font>相册</font></a>
+        <a href="myfriends.php?mid=37440"><font>好友</font></a>
+        <a href="myclan.php?mid=37440"><font>朋友圈</font></a>
+        <a href="questbook.php?mid=37440"><font>留言薄</font></a>
+        <% if @user.has_shop? -%>
+        <%= link_to '商店',user_shop_products_path(:user_id => @user.id, :shop_id => @user.shop.id) %>
+        <% end -%>
+        <div id="tabline"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="content">
+    <div id="indexleft">
+      <%= render :partial => 'users/userinfo', :object => @user %>
+
+    <%= yield  %>
+
+    <div id="foot">
+      版权所有2007-2008©密密麻麻网<br />
+    </div>
+  </div>
+</div>
+
+  </body>
+</html>
+
+
+

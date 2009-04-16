@@ -1,0 +1,144 @@
+<div class="ks-top-users-status fixfloat">
+        <img src="http://cn.yimg.com/i/ks/rank/rank_female_2.gif" width="48" height="48" class="ks-top-potrait">
+        <p><%= link_to '进入我的知识堂',userproblems_problems_path(:user_id => logged_in_user.id), :method => :put %></p>
+      </div>
+<div id="ks-main">
+  <div class="navbar">
+    <%= link_to '知识堂首页', problems_path %> &gt; 所有问答（24小时内最新）    </div>
+  <div id="content" class="cate">
+    <div id="main">
+      <div class="banner">
+      </div>								
+      <div id="area_select" style="border:1px solid #6ac4c4; background:#f5f5f5; margin:0 0 10px 0; padding:.5em 1em">
+        此处作为问题地区查询
+      </div>
+      <div class="mqlist">
+        <div class="hd">
+          <ul>
+            <li class="current"><strong>提问中问题</strong></li>
+            <li><%= link_to '投票中问题'%></li>
+            <li><%= link_to '已解决问题'%></li>
+            <li><%= link_to '知识贡献'%></li>
+            <li><%= link_to '精彩推荐'%></li>
+          </ul>
+        </div>
+        <div class="bd">
+          <table>
+            <thead>
+              <tr>
+                <th class="mqlist_cate">分类</th>
+                <th class="mqlist_title">标题</th> 
+                <th class="mqlist_dt" style="position:relative"><a href="#" class="down"onmousedown="" id="select-source">来源</a>
+                </th>
+                <th class="mqlist_offer"><a href="/dir/ask_-award.html" onmousedown="clk(this, sds_path+'cpot', event);">悬赏</a></th><th class="mqlist_answer"><a href="/dir/ask_-ans.html" onmousedown="clk(this, sds_path+'cnum', event);">回答</a></th><th class="mqlist_dt"><a href="/dir/ask_date.html" class="down"onmousedown="clk(this, sds_path+'ctime', event);">时间</a></th>        </tr>
+            </thead>
+            <tbody>
+              <% @problems.each do |problem|%>
+                <tr>
+                  <td class="mqlist"><%= link_to problem.problem_category.name %></td>
+                  <td class="mqlist_title">
+                    <%= link_to problem.title, problem_path(:id => problem.id)%>
+                  </td>
+                  <td align="center">
+                  </td>
+                  <td class="mqlist_offer"><span><%= problem.score%></span></td>
+                  <td class="mqlist_answer"><%= problem.replies_count %></td>
+                  <td class="mqlist_dt"><font size=2><%= time_ago_in_words(problem.created_at)%> 前</font> </td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+          <div class="page">
+            <ul>
+              <li><span>1</span></li> 
+              <li><a href="/dir/ask_-date_41_2254.html" class="nxt" >下一页</a></li> 
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="side1">
+      <div id="ks_nav" class="gmodule">
+        <div class="hd">
+          <h2>知识导航</h2>
+        </div>
+        <div class="bd">
+          <ul>
+            <% @categories.each do |category|%>
+              <li ><dt><%= link_to category.name %></dt></li>
+            <% end %>
+          </ul>
+
+        </div>
+      </div>
+
+      <div class="gmodule" id="rlinks">
+        <div class="hd">
+          <h2>相关链接</h2>
+          <a href="http://help.cn.yahoo.com/property.html?product=knowledge" target="_blank" class="more" onmousedown="clk(this, sds_path+'llnk', event);">更多</a>
+        </div>
+        <div class="bd">
+
+          <ul class="glist">
+            <li><a href="http://i.cn.yahoo.com/cn_knowledge" target="_blank" onmousedown="clk(this, sds_path+'llnk', event);">空间</a>/ <a href="http://help.cn.yahoo.com/feedback.html?product=knowledge" target="_blank" onmousedown="clk(this, sds_path+'llnk', event);">反馈邮箱</a></li>
+          </ul>
+          <ul class="glist alt">
+            <li><a href="http://help.cn.yahoo.com/answerpage.html?product=knowledge&catyname=contribute" target="_blank" onmousedown="clk(this, sds_path+'llnk', event);">如何贡献知识</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="gmodule amodule">
+
+        <div class="hd">
+          <h2>活动专区</h2>
+        </div>
+        <div class="bd">
+          <a href="http://ks.cn.yahoo.com/question/1408121900948.html" onMouseDown="clk(this, '/ks/finance/aisou', event);" target="_blank">知识答题闯关 </a>
+        </div>
+    </div>        </div>
+    <!--[if !IE]>end:左侧栏目<![endif]-->
+
+    <!--[if !IE]>start:右侧栏目<![endif]-->
+    <div id="side2">
+      <div id="cate_contrib" class="gmodule">
+        <div class="hd">
+          <h2>精彩知识问答</h2>
+          <a href="/dir/recom.html" class="more" onmousedown="clk(this, sds_path+'rque', event);">更多</a>
+        </div>
+        <div class="bd">
+          <ul class="glist">                       	
+            <li><a href="/question/1406032501749.html" target="_blank" onmousedown="clk(this, sds_path+'rque', event);">斑马身上为什么有黑白条纹</a></li>		
+          </ul>
+
+        </div>
+      </div>
+      <div id="cate_contrib" class="gmodule">
+        <div class="hd">
+          <h2>精彩知识贡献</h2>
+          <a href="/dir/recom.html" class="more" onmousedown="clk(this, sds_path+'rsel', event);">更多</a>
+        </div>
+        <div class="bd">
+          <ul class="glist">
+            <li><a href="/question/1407012401636.html" target="_blank" onmousedown="clk(this, sds_path+'rsel', event);">被蜜蜂、黄蜂等蜇伤了怎么办？</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="uprating" class="gmodule">
+
+        <div class="hd">
+          <h2>上周积分上升排行榜</h2>
+          <a href="/rank_weekly" target="_blank" class="more" onmousedown="clk(this, sds_path+'rtax', event);">更多</a>
+        </div>
+        <div class="bd">
+          <ol>
+            <li><a href="/my/profile/AA11947896" target="_blank" onmousedown="clk(this, sds_path+'rtax', event);">m4854765@yah</a> <span>21930</span></li>
+          </ol>
+        </div>
+        <div class="ft">
+          <a href="/rank_total" target="_blank" onmousedown="clk(this, sds_path+'rtax', event);">进入总积分排行榜&gt;&gt;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

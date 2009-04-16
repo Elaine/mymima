@@ -1,0 +1,57 @@
+<div class="hw-t2">
+  <!-- {start:频道导航 -->
+  <div class="ycn-prod-nav ycn-prod-nav-theme5">
+    <div class="hd">
+      <div class="ycn-main-navbar">
+        <ul>
+          <li><%= link_to '个人空间',userhome_path(:user_id => logged_in_user) %></li>
+          <li><%= link_to '网站首页', home_path%></li>
+          <li><%= link_to '相册'%></li>
+          <li><%= link_to '论坛', forums_path %></li>
+          <li class="selected"><%= link_to '知识堂', problems_path %></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bd">
+      <div class="ycn-second-navbar">
+        <ul>
+          <li class="selected"><%= link_to '知识堂首页',problems_path %></li>
+          <li><%= link_to '网友最爱看' %></li>
+        <li><%= link_to '连环画'%></li>
+        <li><%= link_to '专题' %></li>
+        <li><%= link_to '开心玩吧' %></li>
+        <li><%= link_to '专家团' %></li>
+        <li class="last"><%= link_to '答人团'%>
+        </li>
+        </ul>
+      </div>
+      <div class="ycn-addlink" style="width:178px;">
+        <ul>
+          <li><%= link_to '积分兑奖' %></li><li>|</li>
+          <li><%= link_to '帮助中心' %></li><li>|</li>
+          <li><%= link_to '在线反馈' %></li>
+        </ul>
+      </div>
+    </div>
+  </div><!-- }end:频道导航 -->
+  <div id="ks-top-nav">
+    <div id="ks-top-nav-menu" class="fixfloat">
+      <ul class="fixfloat">
+        <li id="ks-top-nav-ask"><%= link_to '千万网友为您回答', new_problem_path %></li>
+        <li id="ks-top-nav-answer"><%= link_to '赚>积分 赢大奖',problems_path %></li>
+        <li id="ks-top-nav-discover"><%= link_to '分享知识和经验' %></li>
+      </ul>
+      <!-- 此处为进入我的知识堂小头像.已经移到各个页面了.-->
+    </div>
+  </div>
+  </div>
+<style>
+  /*category-nr*/
+  #category-nr ul{font-size:12px;color:#000}
+  #category-nr li{padding:5px 0}
+  #category-nr li .potrait{float:left; width:56px;overflow:hidden;padding-top:5px;text-align:center}
+  #category-nr li .potrait img{margin-bottom:3px}
+  #category-nr li .intro{margin-left:58px;width:auto;line-height:1.72}
+  #category-nr li .intro p .ask01{display:block; width:80px; height:22px;margin:5px 0 0 0; background-image:url(http://cn.yimg.com/i/nks/spask/img/btn_bg.gif); background-repeat:no-repeat;background-position:0 -22px; text-indent:-99999px; outline:none}
+  #category-nr .hue{color:#666}
+</style>

@@ -1,0 +1,26 @@
+<div class="mod">
+        <div class="modth">
+          <div class="lc">
+            <div class="rc">
+              <div class="modtit">
+                <h1>个人管理</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modbox" id="m_list">
+          <ul>
+            <li><a href="ctrlpanel.php">控制面板首页</a></li>
+            <li><a href="mysetting.php?step=1">个人档案设置</a></li>
+            <li><a href="mysetting.php?step=2">修改密码</a></li>
+            <% if @user.has_shop? %>
+            <li><%= link_to '美化店铺', edit_user_shop_path(:user_id => @user.id, :id => @user.shop.id)%></li>
+                <% end %>
+            <li><a href="mysetting.php?step=3">隐私设置</a></li>
+            <li><a href="space_admin.php">美化空间</a></li>
+            <li><a href="mail_list.php">站内消息</a></li>
+            <!--<li><a href="#">标签管理</a></li>-->
+            <li><a href="mysetting.php?step=5">朋友圈个性签名</a></li>
+          </ul>
+        </div>
+      </div>

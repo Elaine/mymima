@@ -1,0 +1,35 @@
+<div id="ks-main">
+  <div class="top_titl">
+    <h1 class="edit">回答</h1>
+    您现在是登录回答状态。
+  </div>
+  <div class="ks_opt">
+    <h1 class="all_titl">回答提问：</h1>
+    <div class="ask_form">
+      <% form_for :reply, :url => problem_reply_path, :html => { :method => :put } do |f|%>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+          <tbody><tr>
+              <th>您正在回答该提问：</th>
+              <td>
+                <h2><%=@problem.title  %></h2>
+              </td>
+            </tr>
+            <tr>
+              <th><em>*</em>您的回答：</th>
+              <td>
+                <%= f.text_area :content, :rows => 8, :cols => 60 %>
+                <p>还可输入<span id="count">2000</span>个字，回答越准确详细，越容易被选为最佳答案！</p>
+              </td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>
+                <%= submit_tag '提交' %>
+              </td>
+            </tr>
+        </tbody>
+      </table>
+    <% end %>
+    </div>
+  </div>
+</div>

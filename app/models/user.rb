@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
   has_many :forums
   has_many :topics, :dependent => :destroy
   has_many :posts, :dependent => :destroy
+  has_many :problems, :dependent => :destroy
+  has_many :replies, :dependent => :destroy
   has_one :shop
   has_one :space
   has_one :style

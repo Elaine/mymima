@@ -1,0 +1,31 @@
+/* 左列 */
+#indexleft {
+	width: 188px;
+	float: left;
+}
+#left {
+	width: 188px;
+	float: left;
+}
+/* 中列 */
+#con {
+	width: 752px;
+	left: 198px;
+	float: right;
+	margin-left: 10px;
+}
+/* 内页中列 */
+#con_ina{
+	width: 752px;
+	float: right;
+}
+#con_inb {
+	width: 752px;
+	float: left;
+}
+/* 右列 */
+#right {
+	width: 188px;
+	float: left;
+	clear: left;
+}

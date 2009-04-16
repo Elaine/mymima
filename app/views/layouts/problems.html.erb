@@ -1,0 +1,21 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>密密麻麻网</title>
+    <meta name="Description" content="密密麻麻网" />
+    <meta name="Keywords" content="摄影婚庆" />
+    <%= stylesheet_link_tag 'problem/calendar' %>
+    <%= stylesheet_link_tag 'problem/common_1_0_5'%>
+    <%= stylesheet_link_tag 'problem/nks62'%>
+    <%= stylesheet_link_tag 'problem/1'%>
+  </head>
+  <body>
+    <div id="header">
+      <%= render :partial => 'problems/header' %>
+    </div>
+    <div class="main top">
+            <%= yield %>
+          </div>
+    </body>
+  </html>
+

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090309182205) do
+ActiveRecord::Schema.define(:version => 20090311012202) do
 
   create_table "activities", :force => true do |t|
     t.integer  "user_id"
@@ -242,6 +242,31 @@ ActiveRecord::Schema.define(:version => 20090309182205) do
 
   add_index "posts", ["topic_id"], :name => "index_posts_on_topic_id"
 
+  create_table "problem_categories", :force => true do |t|
+    t.integer  "parent_id"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "problem_categories", ["name"], :name => "index_problem_categories_on_name"
+  add_index "problem_categories", ["parent_id"], :name => "index_problem_categories_on_parent_id"
+
+  create_table "problems", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "problem_category_id"
+    t.string   "title"
+    t.text     "content"
+    t.integer  "score"
+    t.integer  "replies_count",       :default => 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.datetime "end_at"
+  end
+
+  add_index "problems", ["problem_category_id"], :name => "index_problems_on_problem_category_id"
+  add_index "problems", ["user_id"], :name => "index_problems_on_user_id"
+
   create_table "products", :force => true do |t|
     t.integer  "shop_id"
     t.integer  "category_id"
@@ -261,6 +286,17 @@ ActiveRecord::Schema.define(:version => 20090309182205) do
 
   add_index "products", ["category_id", "shop_id"], :name => "index_products_on_category_id_and_shop_id"
   add_index "products", ["name"], :name => "index_products_on_name"
+
+  create_table "replies", :force => true do |t|
+    t.integer  "problem_id"
+    t.integer  "user_id"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "status",     :default => false
+  end
+
+  add_index "replies", ["problem_id"], :name => "index_replies_on_problem_id"
 
   create_table "sessions", :force => true do |t|
     t.string   "session_id", :null => false
@@ -383,6 +419,7 @@ ActiveRecord::Schema.define(:version => 20090309182205) do
     t.integer  "comments_count"
     t.integer  "photos_count",     :default => 0
     t.string   "profile"
+    t.integer  "problems_count",   :default => 0
   end
 
   add_index "users", ["username"], :name => "index_users_on_username"

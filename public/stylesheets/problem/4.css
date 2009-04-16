@@ -1,0 +1,324 @@
+/*CLASSIC - WHITE*/
+
+/*BEGIN masthead treatment*/
+/* bottom corners turned off by default */
+#ymgl-masthead {}
+
+#ymgl-masthead .ct {}
+/*END masthead treatment*/
+
+/*BEGIN body spacing*/
+#doc-body {
+   padding-top:25px;
+}
+
+#doc-body #doc-1 {
+   top:25px;
+   *top:0;
+}
+
+#doc-body .thm-wrapper {
+   padding-bottom: 80px;
+}
+
+#doc-body.my-page {
+   top:0;
+   margin-bottom:0;
+}
+/* for overlapping images on the global nav:
+
+margin-bottom = negative top value for doc-body*/
+#doc-head #ymgl-masthead .button,
+#doc-head #ymgl-user-notice,
+#doc-head #ymgl-welcome-banner {}
+/*END body spacing*/
+
+/*BEGIN page background*/
+#doc-body {
+   background:#fff;
+}
+
+#doc-body .thm-wrapper {
+   background:transparent;
+}
+
+/*popup & iframes get solid bgs. no images*/
+#doc-body.doc-popup-body,
+#doc-body.doc-iframe-body #calendar {
+   background:#fff;
+}
+/*END page background*/
+
+/*BEGIN container background*/
+/* default container bg color (checkerboard bg's go here) */
+#doc-body .container-0,
+#doc-body .container-1,
+#doc-body #blog-calendar,
+#doc-body #ymgl-blog dd.post-body .poll dd {
+   background:#fff;
+}
+
+/* left-col profile bg (if different from default) */
+#doc-body #ymgl-profile {
+   background:#fff;
+}
+
+/* left-col profile nickname background color */
+#doc-body #ymgl-profile h2 {
+   background:#fff;
+}
+
+/* left-col user-card bg (if different then left-col profile bg) */
+#doc-body #ymgl-profile .user-card-shadow .user-card {
+   background:#fff;
+}
+
+/* left-col action link & action menu bg */
+#doc-body #ymgl-profile .body .action-shadow .action,
+#doc-body #ymgl-profile .body .action-menu {
+   background:#fff;
+}
+
+/* blast bg */
+#doc-body #ymgl-blast,
+#doc-body #ymgl-blast .thm-box {
+   background:#ebebeb;
+}
+
+#doc-body #ymgl-blast.whisper {
+   background:transparent;
+}
+
+/* blog comments and poll bg */
+#doc-body #ymgl-blog .comments,
+#doc-body #ymgl-blog .poll {
+   background:#f8f8f8;
+}
+
+/* blog poll bar color = main text color */
+#doc-body #ymgl-blog dd.post-body .poll dd div {
+   background:#555;
+}
+
+/* blog calendar bg colors */
+#doc-body #blog-calendar caption,
+#doc-body #blog-calendar th,
+#doc-body #blog-calendar td.today {
+   background:#ebebeb;
+}
+/*END container background*/
+
+/*BEGIN text color*/
+/* main text color */
+#doc-body,
+#doc-body table,
+#doc-body #blog-calendar caption,
+#doc-body #blog-calendar th,
+#doc-body .rnr dt,
+#doc-body #ymgl-profile .head p {
+   color:#555;
+}
+
+/* small text color */
+#doc-body .footnote,
+#doc-body cite,
+#doc-body .datestamp,
+#doc-body .caption,
+#doc-body #blog-calendar td {
+   color:#989898;
+}
+
+/* profile text color (if different from main text color) */
+#doc-body #ymgl-profile,
+#doc-body #ymgl-profile .head p {}
+
+/* profile user-card text color (if different from left-col profile) */
+#doc-body #ymgl-profile .user-card-shadow .user-card {}
+
+/* blast text color (gets main text color by default) */
+#doc-body #ymgl-blast {
+   color:#555;
+}
+
+/* module headline text color */
+#doc-body h3,
+#doc-body #ymgl-profile-detail h3,
+#doc-body #ymgl-blog .comments h4,
+#doc-body .profile .foot .stats .body {
+   color:#a1a1a1;
+}
+
+/* nickname text color */
+#doc-body #ymgl-profile h2 {
+   color:#555;
+}
+
+/* my-links & pagination text colors */
+#doc-body .my-links h4,
+#doc-body .pagination {}
+
+#doc-body .my-links a:link,
+#doc-body .pagination a:link,
+#doc-body .pagination a:visited {}
+
+#doc-body .my-links a:visited {}
+
+/* body link color */
+#doc-body a:link,
+#doc-body #ymgl-profile a:visited,
+#doc-body .pagination a:visited,
+#doc-body .publish p.footnote a:visited,
+#doc-body .doc-layout-4 .publish .head a:visited,
+#doc-body .doc-layout-4 .publish .foot a:visited,
+#doc-body .publish .user-card a:visited,
+#doc-body #ymgl-blog-promo a:visited,
+#doc-body.doc-iframe-body #calendar caption a:visited,
+#doc-body #ymgl-blog dd.post-body .poll a:visited {
+   color:#5683a4;
+}
+
+/* body visited link color */
+#doc-body a:visited,
+#doc-body .publish .user-card strong a:visited,
+#doc-body #ymgl-feed a:visited,
+#doc-body table a:visited {
+   color:#5e9c7c;
+}
+
+/* page head, page foot, masthead link colors */
+#doc-head a:link,
+#doc-head a:visited,
+#doc-head #ymgl-masthead .body a:link,
+#doc-head #ymgl-masthead .body a:visited,
+#doc-foot a:link,
+#doc-foot a:visited,
+#doc-body #ymgl-blast a:link,
+#doc-body #ymgl-blast a:visited {
+   color:#5683a4;
+}
+/*END text color*/
+
+/*BEGIN line colors*/
+/* outside line colors */
+#doc-body .container-1,
+#doc-body .container-0,
+#doc-body #ymgl-blog .head,
+#doc-body #ymgl-local-reviews .head,
+#doc-body #ymgl-blog .comments,
+#doc-body #ymgl-journal-slideshow .wrapper,
+#doc-body.doc-iframe-body #calendar {
+   border-color:#cbcbcb;
+}
+
+/* hr's & dividing lines */
+#doc-body #ymgl-profile-detail dd,
+#doc-body #ymgl-photos .body .flickr,
+#doc-body #ymgl-blog dd.post-body,
+#doc-body #doc-2 .row,
+#doc-body #ymgl-feed dl,
+#doc-body #ymgl-local-reviews td,
+#doc-body #ymgl-local-reviews th,
+#doc-body #ymgl-local-reviews li,
+#doc-body #ymgl-local-reviews .rnr,
+#doc-body #ymgl-blog li .body,
+#doc-body #ymgl-local-reviews .sub-rating,
+#doc-body #ymgl-profile .foot,
+#doc-body #ymgl-blog .add-rss,
+#doc-body #ymgl-guestbook .body .form-wrapper,
+#doc-body #blog-calendar td {
+   border-color:#e1e1e1;
+}
+
+/*profile user-card borders*/
+#doc-body #ymgl-profile .user-card-shadow .user-card {
+   border-color:#cbcbcb;
+}
+
+/*action menu & button borders*/
+#doc-body #ymgl-profile .body .action-shadow .action,
+#doc-body #ymgl-profile .body .action-menu,
+#doc-body #ymgl-profile .body .action-menu li {
+   border-color:#aaa;
+}
+
+/* blog poll bar color = main text color */
+#doc-body #ymgl-blog dd.post-body .poll dd {
+   border-color:#555;
+}
+/*END line colors*/
+
+/*BEGIN icons & badges*/
+/* list bullet. default is black
+use http://cn.yimg.com/cn360/l.yimg.com/us.yimg.com/i/us/cmty/ul_bullet_wht.gif
+for white bullet */
+ul.default li {}
+
+/* my page thumbnail */
+#doc-head.my-page #ymgl-viewer-options .current-theme .thumbnail {
+   background-image:url(http://cn.yimg.com/cn360/l.yimg.com/us.yimg.com/i/us/cmty/thm/white_th.jpg);
+}
+/*END icons & badges*/
+
+/*BEGIN container & blast corners*/
+#doc-body .ct,
+#doc-body .cl,
+#doc-body .cb {
+   background-image:url(http://cn.yimg.com/cn360/l.yimg.com/us.yimg.com/i/us/cmty/thm/white_cr.gif);
+}
+
+/* blast corners */
+#doc-body #ymgl-blast .ct,
+#doc-body #ymgl-blast .ct .cl {
+   background-image:url(http://cn.yimg.com/cn360/l.yimg.com/us.yimg.com/i/us/cmty/thm/white_blast_cr.gif);
+}
+
+#doc-body #ymgl-blast .tail {
+   background-image:url(http://cn.yimg.com/cn360/l.yimg.com/us.yimg.com/i/us/cmty/thm/white_blast_tail.gif);
+}
+
+/*shout*/
+#doc-body #ymgl-blast.shout .ct,
+#doc-body #ymgl-blast.shout .ct .cl {
+   background-image:url(http://cn.yimg.com/cn360/l.yimg.com/us.yimg.com/i/us/cmty/thm/white_blsh_cr.gif);
+}
+
+#doc-body #ymgl-blast.shout .tail {
+   display:none;
+}
+
+/*thought*/
+#doc-body #ymgl-blast.thought .ct,
+#doc-body #ymgl-blast.thought .ct .cl {
+   background-image:url(http://cn.yimg.com/cn360/l.yimg.com/us.yimg.com/i/us/cmty/thm/white_blth_cr.gif);
+}
+
+#doc-body #ymgl-blast.thought .tail {
+   background-image:url(http://cn.yimg.com/cn360/l.yimg.com/us.yimg.com/i/us/cmty/thm/white_blth_tail.gif);
+}
+
+/*quote*/
+#doc-body #ymgl-blast.quote .ct,
+#doc-body #ymgl-blast.quote .ct .cl {
+   background-image:url(http://cn.yimg.com/cn360/l.yimg.com/us.yimg.com/i/us/cmty/thm/white_blqo_cr.gif);
+}
+
+/*question*/
+#doc-body #ymgl-blast.question .ct,
+#doc-body #ymgl-blast.question .ct .cl {
+   background-image:url(http://cn.yimg.com/cn360/l.yimg.com/us.yimg.com/i/us/cmty/thm/white_blqu_cr.gif);
+}
+
+/*sale*/
+#doc-body #ymgl-blast.sale .tail {
+   background-image:url(http://cn.yimg.com/cn360/l.yimg.com/us.yimg.com/i/us/cmty/thm/white_blsa_tail.gif);
+}
+/*END BLAST IMAGES*/
+
+/*CLASSIC - WHITE*/
+
+
+
+.subnavoptical {background:#fff;border:1px solid #CBCBCB;height:30px; filter:Alpha(opacity=100); opacity:1;}
+.subnav .l {color:#555;}
+.subnav a:link,.subnav a:visited { color:#555!important;}
+.subnav .l2 {color:#A7A7A7!important;}

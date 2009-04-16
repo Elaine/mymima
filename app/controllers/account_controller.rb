@@ -6,10 +6,8 @@ class AccountController < ApplicationController
     @user = logged_in_user
     @recent_users = User.find(:all, :order => 'created_at DESC', :limit => 6, :conditions => ['id != :user', { :user => @user}])
     @friends = @user.friendships
-    #@categories = Category.find(:all, :conditions => {:parent_id => nil}, :order => 'name desc')
     @activities = Activity.find(:all, :limit => 2,:order => 'created_at DESC',
                                 :conditions => {:user_id => [@friends.id]})
-    #@visits = Visit.find_all_by_guest_id(@user, :order => 'created_at DESC', :limit => 4)
     @visits = Visit.find_by_sql ["SELECT *, count(DISTINCT user_id) FROM visits WHERE guest_id = ? AND user_id != ? GROUP BY user_id ORDER BY created_at desc", @user, @user]
     respond_to do |format|
       format.html # index.html.erb

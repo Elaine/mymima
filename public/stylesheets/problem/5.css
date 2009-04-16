@@ -1,0 +1,84 @@
+.blastfix {height:55px!important;*height:40px!important;}
+.fix2 {height:0;}
+.profile {margin-top:50px!important;*margin-top:30px!important;  }
+div { clear:none!important;}
+.pagination { padding-bottom:.3em;}
+#doc-head #logo {margin-bottom:0;!important}
+.subnav a.gunman-third:link, .subnav a.gunman-third:visited, .gunman-third {background:url(http://cn.yimg.com/i/cn360/gunman_third.gif) no-repeat scroll 0pt 50%;padding-left:18px;}
+
+/*search box*/
+#hdsch { width:950px; margin:auto;top:.5em;*top:-.4em; position:relative;}
+#hdsch .str_box{ background-image:url(http://cn.yimg.com/i/cn/ks/0830/str_boxm.jpg); background-repeat:repeat-x}
+#hdsch .str_spac{ background-image:url(http://cn.yimg.com/i/cn/ks/0830/str_spac.gif); background-repeat:no-repeat; background-position:right}
+#hdsch .srhbtn2{background:transparent url(http://cn.yimg.com/i/hp/0708/bg_btn.gif) no-repeat;width:72px;height:24px; line-height:24px; font-weight:bold;border:0;font-size:12px;cursor:pointer;cursor:hand; }
+
+/*ks*/
+.ks-location { width:950px; margin:auto;  text-align:left; position:relative;top:.5em;*padding-top:1.5em; left:1em;z-index:100;}
+#ks-container { zoom:1;}
+#ks-container .last { border-bottom:0!important; margin-bottom:0;}
+#ks-container td {white-space:nowrap;}
+.ks-item { padding-bottom:1em;zoom:1; border-bottom:1px solid #ccc; padding:1em; margin:0 .5em;overflow:hidden; *width:100%!important;}
+.ks-item td { padding:.3em 0;text-align:left;}
+.ks-item h2 { padding:.3em 0!important; font-size:13px; margin:0;}
+.ks-item h2 a { font-weight:normal; font-size:12px;}
+.col2-l { width:49%; float:left;}
+.col2-r { width:49%; float:right;}
+.answer-col2-l { width:37%; float:left;}
+.answer-col2-r { width:63%; float:right;}
+
+.ask-col2-l { width:37%; float:left;}
+.ask-col2-r { width:63%; float:right;}
+.contri-col2-l ul,.ask-col2-r ul { margin:.5em;}
+.contri-col2-l li,.ask-col2-r li { line-height:1.8;}
+.answer-col2-r td { vertical-align:top;}
+.ask-col2-r li span {width:75px; display:-moz-inline-box;*display:inline-block;}
+.answercat { margin-top:.5em; width:100%;}
+.answercat td { text-align:center; white-space:nowrap; width:}
+
+.kstd1 { width:55%; white-space:normal; white-space:nowrap;text-align:right!important;padding-right:25px!important;}
+.kstd2 { text-align:center!important; vertical-align:bottom; padding-top:2.5em!important;}
+.kstd3 { text-align:left!important;}
+.histogram1,.histogram2,.histogram3,.histogram4 { width:90px; border:1px solid #69A531; background:#98CC61; margin:auto; margin-bottom:.3em; line-height:0;}
+.histogram2 {background:#C5E49D;}
+.histogram3 {width:60px;}
+.histogram4 {width:60px;background:#C5E49D;}
+.kstd4 { width:50px; background:red;}
+.histogram1 em,.histogram2 em,.histogram3 em,.histogram4 em { position:relative;top:.8em}
+.histogram-table {width:87%;height:160px;}
+.histogram-table td { width:33%;}
+.answer-table-figure {width:90%;height:160px;}
+
+.ks-profile-edit td { padding:.5em 0;}
+.ks-profile-edit em {color:#999;padding-left:.5em;}
+.ks-profile-edit .ks-profile-title { white-space: nowrap; width:12%; padding-right:1em;text-align:right;}
+.ks-profile-edit button {margin-right:.5em;padding:.1em .3em;}
+.ks-profile-myintro {width:80%;}
+
+.ks-table-list th,.ks-table-list td {text-align:center;padding:.25em;}
+.ks-table-list-first {text-align:left!important;}
+.ks-table-list-first button { vertical-align:middle;}
+
+.ks-table-list .stat1,.ks-table-list .stat2,.ks-table-list .stat3,.ks-table-list .stat4 {width:13px;height:19px;background:url(http://cn.yimg.com/i/ks/070429/bg-ic1.gif) no-repeat;overflow:hidden;display:-moz-inline-box;*display:inline-box;}
+.ks-table-list .stat2 {background-position:-13px 0;}
+.ks-table-list .stat3 {background-position:-26px 0;}
+.ks-table-list .stat4 {background-position:-39px 0;}
+
+.ks-table-rank {width:40%;float:left;margin-left:6em;_margin-left:3em;}
+.ks-table-notice {width:30%;float:right;margin-right:6em; _margin-right:3em;}
+.ks-table-rank h2,.ks-table-notice h2 {text-align:center;}
+
+.ks-log-list {width:70%;}
+.ks-log-list th,.ks-log-list td {text-align:left;padding:.2em 0;}
+
+/*misc*/
+.edperinfo { text-align:left; text-indent:.5em;}
+.edperinfo a { font-size:14px; font-weight:bold;}
+.head .right-text {position:absolute!important;right:0!important;}
+.subnav a.smenu-ask:link,.subnav a.smenu-ask:visited,.smenu-ask {background:url(http://cn.yimg.com/i/ks/20070510/wenda.gif) 0 0 no-repeat; padding-left:18px;}
+
+.om { margin-top:1.5em;text-align:left!important; position:relative; *top:-.8em;}
+.om td { padding-left:37px!important; _padding-left:36px!important; }
+#doc-body {*margin-top:-3.3em!important;}
+
+.ks-item:after {content:".";display:block;height:0;clear:both;visibility:hidden;}
+

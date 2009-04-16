@@ -1,0 +1,6 @@
+<dt><%= link_to parent_category.name, listpage_doc_path(:name => parent_category.name) %></dt>
+<dd>
+<% parent_category.product_children.each do |child| -%>
+  <%= link_to child.name, listpage_doc_path(:name => child.name)%>
+<% end %>
+</dd>

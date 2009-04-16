@@ -1,0 +1,66 @@
+<%= stylesheet_link_tag 'problem/flow_1_0_30729'%>
+<div class="ks-top-users-status fixfloat">
+        <img src="http://cn.yimg.com/i/ks/rank/rank_female_2.gif" width="48" height="48" class="ks-top-potrait">
+        <p><%= link_to '进入我的知识堂',userproblems_problems_path(:user_id => logged_in_user.id), :method => :put %></p>
+      </div>
+<div id="doc2">
+  <div class="yn-title">
+    <span class="links"><%= link_to '知识堂首页', problems_path %>&gt;<span class="hue">提问</span></span>
+  </div>
+  <div class="fixfloat">
+    <% form_for :problem, :url => problems_path do |f|%>
+      <div class="yn-mainblock-type2">
+        <div class="fixfloat yn-askmod">
+          <div class="l"><p class="title"><strong><span class="redsymbol">*</span>类别：</strong></p></div>
+          <div class="r">
+            <%= f.select :problem_category_id, ProblemCategory.find(:all, :conditions => { :parent_id => nil}).map {|m| [m.name, m.id]} %>
+          </div>
+        </div>
+        <div class="fixfloat yn-askmod">
+          <div class="l"><p class="title"><strong><span class="redsymbol">*</span>您的提问：</strong></p></div>
+          <div class="r">
+            <%= f.text_field :title, :class => 'input' %>
+          </div>
+        </div>
+        <div class="fixfloat yn-askmod">
+          <div class="l"><p class="title"><strong><span class="redsymbol">*</span>提问内容：</strong></p></div>
+          <div class="r">
+            <%= f.text_area :content, :rows => 5, :cols => 40 %>
+          </div>
+          <div class="r">
+            <p><%= submit_tag '提交'%></p>
+          </div>
+        </div>
+      </div>
+      <div class="yn-second-type2">
+        <div class="yn-mod-type3 yn-mod-green yn-mod" id="gotten">
+          <div class="hd fixfloat"><a href="#" class="more">更多&gt;&gt;</a><h4 class="green">如何提问？</h4></div>
+          <div class="bd yn-pd-type4 yn-fz12">
+            <ul class="yn-news-listbg">
+              <p>在提问框中输入您的问题，然后点"提交问题"按钮就ok啦！</p>
+            </ul>
+          </div>
+          <div class="ft"></div>
+        </div>
+      </div>
+    <% end %>
+
+  </div>
+</div>
+<div style="left: 549px; top: 293.267px; z-index: 99999999;" id="dialog-ask_c" class="yui-panel-container yui-dialog shadow">
+  <div style="visibility: inherit; width: 340px;" id="dialog-ask" class="yn-mod-type3 yui-module yui-overlay yui-panel">
+    <div id="dialog-ask_h" style="cursor: move;" class="hd"><h4></h4><div class="container-close"></div>
+    </div>
+    <div class="bd">
+      <div style="overflow: hidden; position: relative;">
+        <ul class="users-list">
+        </ul>
+      </div>
+    </div>
+    <div class="ft">
+      <div class="pagenav fixfloat" id="pagenavid"><a href="#" class="nextpre"><em class="arrowl"></em>上一页</a>
+        <a href="#" class="nextpre"><em class="arrowr"></em>下一页</a></div>
+      <div class="tacenter yn-mod"><input value="向他提问" id="asktheperson" type="button"></div>
+    </div>
+    <div class="container-close">&nbsp;</div></div></div>
+                                                      </div>

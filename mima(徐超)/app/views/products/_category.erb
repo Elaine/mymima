@@ -1,0 +1,18 @@
+<% if category.parent_id.nil? -%>
+
+  <% category.children.each do |child|%>
+<dd><%= link_to child.name, admin_category_path(:id => child.id) %></dd>
+  <% end %>
+<% else -%>
+  <% category.parent.children.each do |brother| -%>
+<dd><%= link_to child.name, admin_category_path(:id => child.id) %></dd>
+    <% end -%>
+<% end -%>
+<% if category.shops.empty? -%>
+    <dt>商家类型<dt>
+    <% category.shops.each do |shop| -%>
+      <dd><%= link_to shop.name, admin_category_path(:id => category.id)%><dd>
+    <% end -%>
+    <dt>推荐商家<dt>
+  <% end -%>
+
